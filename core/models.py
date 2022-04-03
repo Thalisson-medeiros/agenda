@@ -15,3 +15,6 @@ class Evento(models.Model):
 
     def __str__(self):
         return self.titulo #irá retornar o título que for escrito dentro do django admin!
+    
+    def get_data_evento(self):
+        return self.data_evento.strftime('%d/%m/%Y %H %M Hrs') #formatando a data e a hora

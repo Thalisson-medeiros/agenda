@@ -22,5 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('agenda/', views.lista_eventos),
     #path('', views.index) #primeira forma de redirecionar o usuario para a pagina agenda
-    path('', RedirectView.as_view(url='/agenda/')) #segunda forma de redirecionar
+    path('', RedirectView.as_view(url='/agenda/')), #segunda forma de redirecionar
+    path('login/', views.login_user), #redireciona para login_user
+    path('login/submit',views.submit_login),
+    path('logout/',views.logout_user)
 ]
